@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package common;
+
+import "common/car.proto";
+
+option java_multiple_files = true;
+option java_package = "com.example.models";
+
+
+message Dealer{
+  map<int32, common.Car> model = 1;
+}
